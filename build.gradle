@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.vitri'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.20.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.25.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2")
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.20.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.26.3'
+}
+
+test {
+    useJUnitPlatform()
+}
