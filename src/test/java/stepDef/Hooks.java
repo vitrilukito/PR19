@@ -1,9 +1,6 @@
 package stepDef;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import io.cucumber.java.*;
 
 import static helper.Utility.quitDriver;
 import static helper.Utility.startDriver;
