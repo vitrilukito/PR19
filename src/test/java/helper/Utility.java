@@ -4,14 +4,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.time.Duration;
+
 
 public class Utility {
 
     public static WebDriver driver;
 
-    public static void startDriver(){
+    public static void startDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -22,7 +22,8 @@ public class Utility {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
-    public static void quitDriver(){
+    public static void quitDriver() {
         driver.quit();
     }
+
 }

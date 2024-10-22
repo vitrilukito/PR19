@@ -2,8 +2,7 @@ package stepDef;
 
 import io.cucumber.java.*;
 
-import static helper.Utility.quitDriver;
-import static helper.Utility.startDriver;
+import static helper.Utility.*;
 
 public class Hooks {
 
@@ -22,8 +21,9 @@ public class Hooks {
 
     @After
     public void afterTest() throws InterruptedException{
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         quitDriver();
     }
+
 }
 
